@@ -1,0 +1,244 @@
+/*Start Global style */
+* {
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../images/bg-pattern-bottom-desktop.svg'), url('../images/bg-pattern-top-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: right 100px, left top;
+    background-size: initial, 100%;
+  
+    font-family: 'Spartan', sans-serif;
+    font-size: 1rem;
+  }
+
+  p {
+    font-weight: 400;
+  }
+  /* End Global style */
+  
+  /* start component style*/
+
+  .upperPart{
+        display: flex;
+        flex-direction: row;
+        -ms-flex-direction: row;
+        justify-content: space-between;
+        align-items: center;   
+  }
+
+.upperPart__left{
+    flex: 0 0 40%;
+}
+
+.upperPart__left h1{
+    color: hsl(300, 43%, 22%);
+    font-weight:700px;
+    font-size:3rem ;
+}
+
+.upperPart__left p{
+    color:hsl(303, 10%, 53%) ;
+    font-size:.9rem;
+    font-weight: 500;
+    margin-top:.5rem;
+    line-height: 1.5;
+}
+
+.upperPart__right{
+    flex: 0 0 50%;
+    align-self: flex-start;
+  
+    display: flex;
+    flex-direction: column;
+  
+}
+
+.cards{
+    display:flex;
+    align-items: center;
+    padding: 1.2rem 3rem;
+    margin: 1rem;
+    background-color:hsl(300, 24%, 96%);
+    border-radius: 10px;
+    color:hsl(300, 43%, 22%);
+}
+
+
+
+.cardOne {
+    align-self: flex-start;
+
+  }
+
+  .cardTwo{
+    align-self: center;
+  }
+  .cardthree {
+    align-self: flex-end ;
+ }
+  
+  .starts {
+    list-style: none;
+    display: flex;
+    margin-right: 1rem;
+  }
+  
+  .starts > li {
+    margin-right: 5px;
+  }
+  
+  /*End of the heading */
+
+  /* start review style*/
+
+  .ReviewsGeneral{
+    height: 250px;
+    display: flex;
+    flex-direction:row;
+    margin: 2rem 0rem;
+    }
+
+  .Reviews{
+      float: 0 0 33.333%;
+      background-color:hsl(300, 43%, 22%) ;
+      color:hsl(0, 0%, 100%);
+      padding:2rem;
+      margin-right: 1rem;
+      border-radius: 10px;
+      }
+
+      .customerReview{
+          display:flex;
+          align-items: center;
+      }
+
+      .customerReview img{
+          width: 45px;
+          border-radius: 50%;
+      }
+      .Reviews p{
+        margin-top: 1.5rem;
+        line-height: 1.25;
+        font-size: .9rem;
+        color: hsl(300, 24%, 96%);    
+      }
+      .author{
+        margin-left: 1.35rem;
+      }
+      .author span{
+          color:  hsl(333, 80%, 67%);
+          font-size: .8rem;
+          font-weight: 500;
+    }
+
+    .one{
+        align-self:flex-start; 
+    }
+    .two{
+        align-self: center;
+    }
+    .three{
+        align-self: flex-end;
+    }
+
+    /*CRAP*/
+
+    @media (max-width: 768px) {
+
+        body {
+            background-image: url('../images/bg-pattern-top-mobile.svg'), url('../images/bg-pattern-bottom-mobile.svg');
+            background-repeat: no-repeat, no-repeat;
+            background-position: top left, bottom right;
+          }
+        
+        .upperPart{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .upperPart__right{
+            align-self: unset;
+        }
+
+        .one , .two , .three{
+            align-self: unset;
+        }
+
+        .ReviewsGeneral{
+            flex-direction: column;
+        }
+        .Reviews{
+          margin-bottom: 1rem;
+        }
+
+        .cards {
+            margin-right: 0;
+          }
+        
+        
+
+
+
+      }
+            @media (max-width:375px){
+              .upperPart__left {
+                text-align: center;
+              }
+              .upperPart__left h1 {
+                font-size: 2rem;
+              }
+            
+            .Reviews{
+              margin-bottom: 32px;
+            }
+              .cards .starts{
+                margin-bottom: 10px;
+              }
+              .cards  {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 1rem 0rem;
+              }
+            
+
+                }
+/* End Media Queries */
+
+
+/* Start Custom Farmework */
+.container {
+    min-height:100vh;
+    max-height: 100%;
+    display:flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    margin:auto;
+    padding: 0px 20px;
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .container {
+      width: 960px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .container {
+      width: 1140px;
+    }
+  }
+/* End Custom Farmework */
